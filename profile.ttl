@@ -1,0 +1,66 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX role: <http://www.w3.org/ns/dx/prof/role/>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/eia-dp>
+    a prof:Profile ;
+    schema:dateCreated "2025-05-02"^^xsd:date ;
+    schema:creator <http://orcid.org/0000-0002-8742-7730> ;
+    schema:dateModified "2025-05-02"^^xsd:date ;
+    schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:description """The Environmental Information Australia (EIA) Data Profile is a profile of the Loc-I Data Profile which is a spatial data Semantic Web profile. That profile sets requirements for metadata and the structure of spatial data in Semantic Web form to ensure data cataloguing and spatial operations can be met across any datasets conforming to it.
+
+This profile extends the cataloguing requirements to allow for more sophisticated data management and introduces environmental domain requirements to ensure that data conforming to this profile is also interoperable there too.""" ;
+    schema:name "EIA Data Profile" ;
+    prof:hasResource
+        [
+            schema:description "This profile's specification - human-readable" ;
+            dcterms:format "text/html" ;
+            schema:name "Specification" ;
+            prof:hasArtifact "https://linked.data.gov.au/def/eia-dp"^^xsd:anyURI ;
+            prof:hasRole role:specification ;
+        ] ,
+        [
+            dcterms:conformsTo <https://www.w3.org/TR/shacl/> ;
+            schema:description "This profile's SHACL validator" ;
+            dcterms:format "text/turtle" ;
+            schema:name "Validator" ;
+            prof:hasArtifact "https://linked.data.gov.au/def/eia-dp/validator"^^xsd:anyURI ;
+            prof:hasRole role:validation ;
+        ] ,
+        [
+            schema:description "Examples of valid and valid data" ;
+            schema:name "Examples" ;
+            dcterms:format "text/turtle" ;
+            prof:hasArtifact "https://github.com/dcceew-bdr/eia-data-profile/blob/main/examples"^^xsd:anyURI ;
+            prof:hasRole role:example ;
+        ] ,
+        [
+            schema:description "An online version control repository storing all the content of this profile" ;
+            schema:name "Profile Code Repository" ;
+            prof:hasArtifact "https://github.com/dcceew-bdr/eia-data-profile"^^xsd:anyURI ;
+            prof:hasRole role:repository ;
+        ] ;
+    prof:isProfileOf <https://linked.data.gov.au/def/loci-dp> ;
+.
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
+.
+
+<http://orcid.org/0000-0002-8742-7730>
+    schema:affiliation <https://kurrawong.ai> ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:name "Nicholas J Car" ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
