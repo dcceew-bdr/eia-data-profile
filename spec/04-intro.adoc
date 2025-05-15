@@ -1,61 +1,49 @@
 == Introduction
 
-
-
-to be sent to the BDR, above and beyond those already imposed by ABIS. ABIS essentially defines the scientific information within data set to the BDR but does not define how to package that data, when it can be made available and so on. That is covered by this Profile.
+This "data profile" is a profile of the <<LOCIDP, _Loc-I Data Profile_>> is, in turn, a profile of several well-known https://en.wikipedia.org/wiki/Semantic_Web[Semantic Web] data standards.
 
 * A **_profile_** is a "specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications" https://www.w3.org/TR/dx-prof/#dfn-data-specification[[W3C]].
 
+The <<LOCIDP, _Loc-I Data Profile_>> sets requirements for two main, and generic, dimensions of datasets:
 
-the https://www.dcceew.gov.au[Department of Climate Change, Energy and the Environment (DCCEEW)]'s profile of the <<LOCIDP, _Loc-I Data Profile_>>.
+* data management
+* spatio/temporal
 
-The _Loc-I Data Profile_ is, in turn, a profile of
+Data cannot reasonably be managed unless the "data management" dimensions of it are organised and the standardisation of the spatio/temporal dimension is also fundamental for data about the earth and environment, as EIA data is.
 
+The <<LOCIDP, _Loc-I Data Profile_>> essentially marries up these two dimensions to prescribe how to package and describe (with metadata), spatial datasets. The particular elements of standardisation that it uses in each dimension, it inherits from the standards it profiles, for example:
 
+* for **data management**: <<SDO, schema.org>>, basic metadata such as name, license etc.
+* for **spatio/temporal**: <<GSP, GeoSPARQL>>, spatial objects such as Features and Geometries
 
-* A **_profile_** is a "specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications" https://www.w3.org/TR/dx-prof/#dfn-data-specification[[W3C]].
+This profile builds on the <<LOCIDP, _Loc-I Data Profile_>> to introduce the following:
 
+* for **data management**: <<PROJ, BDR Project Model>>, information about projects that relate to data
+* for the **environment** dimension:
+** <<SOSA, SOSA Ontology>>, observations & measurements modelling
+** <<NSLM, National Species List Model>>, species' names & taxa
 
-
-
-This document is the normative specification of the https://www.dcceew.gov.au/environment/environment-information-australia/biodiversity-data-repository[Biodiversity Data Repository (BDR)]'s _profile_ of the https://linked.data.gov.au/def/abis[Australian Biodiversity Information Standard (ABIS)].
-
-The purpose of this profile is to define requirements of data that is to be sent to the BDR, above and beyond those already imposed by ABIS. ABIS essentially defines the scientific information within data set to the BDR but does not define how to package that data, when it can be made available and so on. That is covered by this Profile.
-
-[NOTE]
-====
-ABIS may be used for data representation and data exchange with no reference to this this Profile _if there is to be no involvement with the BDR._ For example, it is perfectly acceptable for companies to exchange ABIS data amongst themselves.
-
-However, this Profile is freely available for any use so anyone may use this Profile to represent and excahnge data if they wish.
-====
-
-The figure below, which is the same as the one at the start of this document, shows the envelope of this Profile with ABIS and the other models within it. See https://linked.data.gov.au/def/abis#_models[ABIS' Models Section] for the details of the various models inside ABIS and the models that ABIS, in turn, profiles.
-
-[#intro-models-overview,link="img/models-overview.svg"]
-.Models within the Profile. Contained are ABIS - for scientific content - and Project, Data Release and Submission Manifest models for data management within the BDR.
-image::img/models-overview.svg[NSL Model Overview,align="center",width=700]
+[#intro-data-dimensions,link="img/dimensions.svg"]
+.The main dimensions of data constrained by this profile
+image::img/dimensions.svg[Data dimensions,align="center",width=400]
 
 === Multiple Models
 
-This Profile is centered on ABIS and provides a number of constraints on the use of ABIS, such as mandating certain metadata for Datasets. It also includes several models not found within ABIS that have been developed specifically for data management within the BDR. These models - the Project, Data Release and Submission Manifest models as shown in the figure above - are themselves mini-profiles of other, standard, models in that they mostly reuse classes and predicates from rather than inventing new ones.
+This profile not only profiles the <<LOCIDP, _Loc-I Data Profile_>> but other models too, such as <<SOSA, SOSA Ontology>> and the <<PROJ, BDR Project Model>>.
 
-The "Background Models" that these models inherit from and themselves profile are also the background models of ABIS - this Profile introduces no new ones. You can see the full list of ABIS', and therefore this Profile's, background models at:
+Since the <<LOCIDP, _Loc-I Data Profile_>> also profiles other models such as <<GSP, GeoSPARQL>>, we have a dependency pyramid of multiple models needed for this profile to work.
 
-* https://linked.data.gov.au/def/abis#_background_models[ABIS' Background Models]
-
-Since ABIS is well describes in the https://linked.data.gov.au/def/abis[ABIS Specification], it will not be re-described in this Profile document. The <<Models, following Models section>> described each of the other models within this Profile.
+The relation of this profile to the <<LOCIDP, _Loc-I Data Profile_>> and the other models it directly profiles are defined in this profile's technically definition however the things transitively profiled by this model are not necessarily indicated there. Instead, these other models are all described and related in the https://linked.data.gov.au/def/eia-supermodel[EAI Supermodel] which is an enterprise data model.
 
 === Governance
 
-This Profile is governed by the BDR Team - the team that also operates the BDR.
+This Profile is governed by the BDR Team, see the _Contacts_ in the <<Metadata, Medata Section>> above.
 
-ABIS is managed day-to-day by the Department of Climate Change, Energy, the Environment and Water (https://linked.data.gov.au/org/dcceew[DCCEEW]) however many parts of ABIS are maintained externally, such as the <<TERNOntology, TERN Ontology>> which is maintained by https://linked.data.gov.au/org/tern[TERN] and ABIS as a whole is governance by https://linked.data.gov.au/org/ausbigg[AusBIGG], the Australian Biodiversity Information Governance Group, which comprises DCCEEW, State & Territory biodiversity data holders and other organisations in the sector, such as TERN.
-
-Use of this Profile will always require use of ABIS and no changes will be introduced to this profile that conflict with ABIS.
-
-An Issue Tracker for this document and for any other aspects of ABIS is public and online at: https://github.com/AusBIGG/abis/issues. Anyone with an interest in ABIS is invited to submit Issues there to be considered by ABIS management & governance parties.
+Currently, governance of this profile is by the BDR Team only but this may change if this profile becomes widely used.
 
 === Structure
+
+#up to here#
 
 This specification aims to cover all the information needed to understand ABIS and use it. The following is a list of the major sections in this document and their purposes.
 

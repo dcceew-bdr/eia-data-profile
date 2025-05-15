@@ -24,6 +24,9 @@ OWL2:: World Wide Web Consortium, _OWL 2 Web Ontology Language Document Overview
 [[PROF]]
 PROF:: World Wide Web Consortium, _The Profiles Vocabulary_, W3C Working Group Note (18 December 2019). <https://www.w3.org/TR/dx-prof/>
 
+[[PROJ]]
+PROJ:: DCCEEW, _BDR Project Model_ (2023) https://linked.data.gov.au/def/bdr-proj
+
 [[PROV]]
 PROV:: World Wide Web Consortium, _PROV-O: The PROV Ontology_, W3C Recommendation (30 February 2013). https://www.w3.org/TR/prov-o/
 

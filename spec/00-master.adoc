@@ -1,5 +1,5 @@
-= BDR Profile of ABIS
-:Title: BDR Profile of ABIS
+= EIA Data Profile
+:Title: EIA Data Profile
 :titletext: {title}
 :doctype: book
 :encoding: utf-8
@@ -19,9 +19,9 @@
 :xrefstyle: short
 :source-highlighter: rouge
 
-// [#models-overview,link="img/overview.svg"]
-// .Models within the Profile
-// image::img/models-overview.svg[NSL Model Overview,align="center",width=700]
+[#models-overview,link="img/overview.svg"]
+.Profile Conceptual Overview
+image::img/overview.svg[Profile Conceptual Overview,align="center",width=400]
 
 include::01-metadata.adoc[]
 

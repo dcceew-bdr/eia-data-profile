@@ -29,6 +29,7 @@ jobs:
         echo "Add images to docs/"
         cp -r img docs/
         cp .nojekyll docs/
+        cp context.json docs/context.json
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
