@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "eiadp": "https://linked.data.gov.au/def/eia-pr/" ,
+    "locidp": "https://linked.data.gov.au/def/loci-pr/" ,
+    "abis": "https://linked.data.gov.au/def/abis/" ,
+    "dr": "https://linked.data.gov.au/def/bdr-pr/dr/" ,
+    "proj": "https://linked.data.gov.au/def/bdr-proj/" ,
+    "dcat": "http://www.w3.org/ns/dcat#" ,
+    "ex": "http://example.com/" ,
+    "geo": "http://www.opengis.net/ont/geosparql#" ,
+    "owl": "http://www.w3.org/2002/07/owl#" ,
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#" ,
+    "sosa": "http://www.w3.org/ns/sosa/" ,
+    "schema": "https://schema.org/" ,
+    "skos": "http://www.w3.org/2004/02/skos/core#" ,
+    "tern": "https://w3id.org/tern/ontologies/tern/" ,
+    "time": "http://www.w3.org/2006/time#" ,
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}
+
+
+
