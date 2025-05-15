@@ -1,0 +1,7 @@
+== Abstract
+
+This document is the normative specification of the Environmental Information Australia (EIA) Data Profile which is a profile of the Location Index (Loc-I) Data Profile.
+
+The purpose of this profile is to define requirements of EIA data that when followed enable it to be maximally interoperable with other EIA Data Profile and Loc-I Data Profile data.
+
+Where the LOC-I DP sets requirements for data only within data management and spatial/temporal domains, this profile sets them in the Australian environmental dimension too.

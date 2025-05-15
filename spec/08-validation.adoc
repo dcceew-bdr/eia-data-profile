@@ -1,0 +1,48 @@
+== Validation
+
+Since this profile is a profile of ABIS, all data wanting to conform to this profile must conform to ABIS. Demonstration of conformance to ABIS means passing ABIS validator validation.
+
+Then, to show conformance to this profile and not just ABIS, data must also pass this Profile's validators.
+
+=== ABIS Validation
+
+ABIS requires data validation according to multiple validators:
+
+* several background model validators
+** e.g. the http://www.opengis.net/def/geosparql/validator/[GeoSPARQL Validator]
+* https://w3id.org/tern/shapes/tern/[TERN Ontology Validator]
+* https://linked.data.gov.au/def/brm[Biodiversity Record Model Validator]
+
+These multiple validators are combined into a single ABIS Validator, for ease of use:
+
+* https://linked.data.gov.au/def/abis/validator[ABIS Validator]
+
+=== BDR Profile of ABIS Validation
+
+This profile requires data validation according to multiple validators:
+
+* ABIS Validator
+** as above
+* The BDR Profile of ABIS Core Validator
+** https://linked.data.gov.au/def/bdr-pr/validator/core[validator]
+* Project Model Validator
+** See <<annex-a, Annex A>>
+* Data Release Model Validator
+** See <<annex-b, Annex B>>
+* Submission Manifest Validator
+** See <<annex-c, Annex C>>
+
+=== Combined Validators
+
+The ABIS, BDR Profile of ABIS Core Validator, Project Model and Data Release Model validators are combined into a single validator for ease of use:
+
+* https://linked.data.gov.au/def/bdr-pr/validator[BDR Profile of ABIS Validator]
+
+[NOTE]
+The Submission Manifest Model validator is not included in the BDR Profile of ABIS Validator. This is because BDR Profile of ABIS data is stored within data files which cannot include manifest information and Submission Manifest Model data is stored in files that indicate data files but that do not contain data themselves.
+
+=== Performing Validation
+
+All data submitted to the BDR for ingestion will be validated using all the validators listed above within the BDR's _Data Ingestion Pipeline_ software. In addition, all the validators listed above can be selected for individual or combined use on the https://bdr.gov.au[BDR Portal].
+
+See https://linked.data.gov.au/def/abis#_performing_validation[ABIS' _Performing Validation_ section] for information on other SHACL validation tool options.
