@@ -41,6 +41,6 @@ include::08-validation.adoc[]
 
 :sectnums!:
 
-// include::50_annex_a.adoc[]
+include::50-annex-a.adoc[]
 
 include::99-references.adoc[]

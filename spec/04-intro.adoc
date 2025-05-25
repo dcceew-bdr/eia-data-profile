@@ -29,11 +29,13 @@ image::img/dimensions.svg[Data dimensions,align="center",width=400]
 
 === Multiple Models
 
-This profile not only profiles the <<LOCIDP, _Loc-I Data Profile_>> but other models too, such as <<SOSA, SOSA Ontology>> and the <<PROJ, BDR Project Model>>.
+This profile not only profiles the <<LOCIDP, _Loc-I Data Profile_>> but other models too, such as <<SOSA, SOSA Ontology>> and the <<PROJ, BDR Project Model>>. Since the <<LOCIDP, _Loc-I Data Profile_>> also profiles other models such as <<GSP, GeoSPARQL>>, we have a dependency pyramid of multiple models needed for this profile to work. The profile hierarchy of this profile is given in the figure below.
 
-Since the <<LOCIDP, _Loc-I Data Profile_>> also profiles other models such as <<GSP, GeoSPARQL>>, we have a dependency pyramid of multiple models needed for this profile to work.
+[#profile-hierarchy,link="img/profile-hierarchy.svg"]
+.The Profile Hierarchy of this Profile. The other models shown in the figure are all references in this Profile: <<GSP, GeoSPARQL>>, <<SDO, schema.org>>, <<PROV, PROV>>, <<SOSA, SOSA>>, <<TIME, Time ontology in OWL>>, <<LOCIDP, Loci-I DP>>, <<PROJ, BDR Project Model>>, <<ANSISO, ANSIS Ontology>>, <<NSLM, NSL Model>>.
+image::img/profile-hierarchy.svg[The Profile Hierarchy of this Profile,align="center",width=700]
 
-The relation of this profile to the <<LOCIDP, _Loc-I Data Profile_>> and the other models it directly profiles are defined in this profile's technically definition however the things transitively profiled by this model are not necessarily indicated there. Instead, these other models are all described and related in the https://linked.data.gov.au/def/eia-supermodel[EAI Supermodel] which is an enterprise data model.
+The relation of this profile to the <<LOCIDP, _Loc-I Data Profile_>> and the other models it directly profiles are defined in this profile's technically definition however the things transitively profiled by this Profile are not necessarily indicated there. Instead, you may have to view the directly profiling entity's information for details. Note that the https://linked.data.gov.au/def/eia-supermodel[EAI Supermodel], an enterprise data model that uses this Profile, contains a complete picture of all things profiled by this Profile too.
 
 === Governance
 
@@ -43,26 +45,18 @@ Currently, governance of this profile is by the BDR Team only but this may chang
 
 === Structure
 
-#up to here#
-
-This specification aims to cover all the information needed to understand ABIS and use it. The following is a list of the major sections in this document and their purposes.
+This specification aims to cover all the information needed to understand this Profile and use it. The following is a list of the major sections in this document and their purposes.
 
 [start=4]
 . <<Introduction, Introduction>>
-** This section. An informal overview of ABIS
-. <<ABIS Constraints, ABIS Constraints>>
-** Constraints that this profile places on the use of ABIS
-. <<Models, Models>>
-** The normative description of the models this profile uses in addition to ABIS
+** This section. An informal overview of the Profile
+. <<Specification, Specification>>
+** The formal specification of requirements on data to conform to this Profile
+** Requirements are defined in English (narrative) and corresponding Semantic Web definitions are given
 . <<Vocabularies, Vocabularies>>
-** Description of, and links to, the vocabularies needed for use with ABIS
+** Description of, and links to, the vocabularies needed for use with this Profile
 . <<Validation, Validation>>
-** How to validate data according to ABIS and links to the various validators
+** How to validate data according to this Profile and links to the various validators
 
-Four additional models are defined in this Profile and detailed as Annexes in this document:
 
-* <<annex-a, Annex A: Projects Model>>
-* <<annex-b, Annex B: Data Release Model>>
-* <<annex-c, Annex C: Submission Manifest Model>>
-
-Extended examples are given in <<annex-d, Annex D: Extended Examples>>.
+Extended examples are given in <<annex-a, Annex X: Extended Examples>>.
