@@ -673,8 +673,21 @@ pre.rouge {
 </li>
 <li><a href="#_specification">5. Specification</a>
 <ul class="sectlevel2">
-<li><a href="#_required_identifiers">5.1. Required Identifiers</a></li>
-<li><a href="#profile-bdr-mandates">5.2. Model Element Mandates</a></li>
+<li><a href="#_data_structure">5.1. Data Structure</a>
+<ul class="sectlevel3">
+<li><a href="#_basic_structure_loc_i_dp">5.1.1. Basic Structure: Loc-I DP</a></li>
+<li><a href="#_dataset_metadata">5.1.2. Dataset Metadata</a></li>
+</ul>
+</li>
+<li><a href="#profile-bdr-mandates">5.2. Model Element Mandates</a>
+<ul class="sectlevel3">
+<li><a href="#_feature_collection_metadata">5.2.1. Feature Collection Metadata</a></li>
+<li><a href="#_feature_metadata">5.2.2. Feature Metadata</a></li>
+<li><a href="#_feature_temporality">5.2.3. Feature Temporality</a></li>
+<li><a href="#_feature_classification">5.2.4. Feature Classification</a></li>
+<li><a href="#_sosa_style_observations">5.2.5. SOSA-style Observations</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_models">6. Models</a>
@@ -703,6 +716,7 @@ pre.rouge {
 <li><a href="#_performing_validation">8.4. Performing Validation</a></li>
 </ul>
 </li>
+<li><a href="#annex-a">Annex A: Extended Examples</a></li>
 <li><a href="#_references">References</a></li>
 </ul>
 </div>
@@ -1219,13 +1233,16 @@ pre.rouge {
 <div class="sect2">
 <h3 id="_multiple_models"><a class="anchor" href="#_multiple_models"></a>4.1. Multiple Models</h3>
 <div class="paragraph">
-<p>This profile not only profiles the <a href="#LOCIDP"><em>Loc-I Data Profile</em></a> but other models too, such as <a href="#SOSA">SOSA Ontology</a> and the <a href="#PROJ">BDR Project Model</a>.</p>
+<p>This profile not only profiles the <a href="#LOCIDP"><em>Loc-I Data Profile</em></a> but other models too, such as <a href="#SOSA">SOSA Ontology</a> and the <a href="#PROJ">BDR Project Model</a>. Since the <a href="#LOCIDP"><em>Loc-I Data Profile</em></a> also profiles other models such as <a href="#GSP">GeoSPARQL</a>, we have a dependency pyramid of multiple models needed for this profile to work. The profile hierarchy of this profile is given in the figure below.</p>
+</div>
+<div id="profile-hierarchy" class="imageblock text-center">
+<div class="content">
+<a class="image" href="img/profile-hierarchy.svg"><img src="img/profile-hierarchy.svg" alt="The Profile Hierarchy of this Profile" width="700"></a>
+</div>
+<div class="title">Figure 4. The Profile Hierarchy of this Profile. The other models shown in the figure are all references in this Profile: <a href="#GSP">GeoSPARQL</a>, <a href="#SDO">schema.org</a>, <a href="#PROV">PROV</a>, <a href="#SOSA">SOSA</a>, <a href="#TIME">Time ontology in OWL</a>, <a href="#LOCIDP">Loci-I DP</a>, <a href="#PROJ">BDR Project Model</a>, <a href="#ANSISO">ANSIS Ontology</a>, <a href="#NSLM">NSL Model</a>.</div>
 </div>
 <div class="paragraph">
-<p>Since the <a href="#LOCIDP"><em>Loc-I Data Profile</em></a> also profiles other models such as <a href="#GSP">GeoSPARQL</a>, we have a dependency pyramid of multiple models needed for this profile to work.</p>
-</div>
-<div class="paragraph">
-<p>The relation of this profile to the <a href="#LOCIDP"><em>Loc-I Data Profile</em></a> and the other models it directly profiles are defined in this profile&#8217;s technically definition however the things transitively profiled by this model are not necessarily indicated there. Instead, these other models are all described and related in the <a href="https://linked.data.gov.au/def/eia-supermodel">EAI Supermodel</a> which is an enterprise data model.</p>
+<p>The relation of this profile to the <a href="#LOCIDP"><em>Loc-I Data Profile</em></a> and the other models it directly profiles are defined in this profile&#8217;s technically definition however the things transitively profiled by this Profile are not necessarily indicated there. Instead, you may have to view the directly profiling entity&#8217;s information for details. Note that the <a href="https://linked.data.gov.au/def/eia-supermodel">EAI Supermodel</a>, an enterprise data model that uses this Profile, contains a complete picture of all things profiled by this Profile too.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1240,10 +1257,7 @@ pre.rouge {
 <div class="sect2">
 <h3 id="_structure"><a class="anchor" href="#_structure"></a>4.3. Structure</h3>
 <div class="paragraph">
-<p><mark>up to here</mark></p>
-</div>
-<div class="paragraph">
-<p>This specification aims to cover all the information needed to understand ABIS and use it. The following is a list of the major sections in this document and their purposes.</p>
+<p>This specification aims to cover all the information needed to understand this Profile and use it. The following is a list of the major sections in this document and their purposes.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic" start="4">
@@ -1252,27 +1266,20 @@ pre.rouge {
 <div class="ulist">
 <ul>
 <li>
-<p>This section. An informal overview of ABIS</p>
+<p>This section. An informal overview of the Profile</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><a href="#ABIS Constraints">ABIS Constraints</a></p>
+<p><a href="#_specification">Specification</a></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Constraints that this profile places on the use of ABIS</p>
-</li>
-</ul>
-</div>
+<p>The formal specification of requirements on data to conform to this Profile</p>
 </li>
 <li>
-<p><a href="#_models">Models</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>The normative description of the models this profile uses in addition to ABIS</p>
+<p>Requirements are defined in English (narrative) and corresponding Semantic Web definitions are given</p>
 </li>
 </ul>
 </div>
@@ -1282,7 +1289,7 @@ pre.rouge {
 <div class="ulist">
 <ul>
 <li>
-<p>Description of, and links to, the vocabularies needed for use with ABIS</p>
+<p>Description of, and links to, the vocabularies needed for use with this Profile</p>
 </li>
 </ul>
 </div>
@@ -1292,7 +1299,7 @@ pre.rouge {
 <div class="ulist">
 <ul>
 <li>
-<p>How to validate data according to ABIS and links to the various validators</p>
+<p>How to validate data according to this Profile and links to the various validators</p>
 </li>
 </ul>
 </div>
@@ -1300,23 +1307,7 @@ pre.rouge {
 </ol>
 </div>
 <div class="paragraph">
-<p>Four additional models are defined in this Profile and detailed as Annexes in this document:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#annex-a">Annex A: Projects Model</a></p>
-</li>
-<li>
-<p><a href="#annex-b">Annex B: Data Release Model</a></p>
-</li>
-<li>
-<p><a href="#annex-c">Annex C: Submission Manifest Model</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Extended examples are given in <a href="#annex-d">Annex D: Extended Examples</a>.</p>
+<p>Extended examples are given in <a href="#annex-a">Annex X: Extended Examples</a>.</p>
 </div>
 </div>
 </div>
@@ -1325,87 +1316,39 @@ pre.rouge {
 <h2 id="_specification"><a class="anchor" href="#_specification"></a>5. Specification</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following subsections contain the rules of this Profile that go above and beyond those specified for ABIS generally. They form this Profile’s normative specification.</p>
+<p><em>The Requirements listed here must be met by data wanting to conform to this Profile in addition to requirements from things that this Profile, profiles, in particular the <a href="#LOCIDP">Loc-I Data Profile</a>.</em></p>
+</div>
+<div class="sect2">
+<h3 id="_data_structure"><a class="anchor" href="#_data_structure"></a>5.1. Data Structure</h3>
+<div class="sect3">
+<h4 id="_basic_structure_loc_i_dp"><a class="anchor" href="#_basic_structure_loc_i_dp"></a>5.1.1. Basic Structure: Loc-I DP</h4>
+<div id="locidp-structure" class="imageblock text-center">
+<div class="content">
+<a class="image" href="img/locidp-structure.svg"><img src="img/locidp-structure.svg" alt="Loc-I Data Profile data structure" width="300"></a>
+</div>
+<div class="title">Figure 5. Loc-I Data Profile data structure</div>
+</div>
+<div class="paragraph">
+<p>This Profile&#8217;s Requirements for the overall structure of data are based on those of the <a href="#LOCIDP">Loc-I Data Profile</a>'s, a diagram of which is shown above and that, in summary, are:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#_required_identifiers">Required Identifiers</a></p>
+<p><code>Feature</code> instances must exist within one or more <code>Feature Collection</code> instances</p>
 </li>
 <li>
-<p><a href="#profile-bdr-mandates">Model Element Mandates</a></p>
+<p><code>Feature Collection</code> instances must exist within one or more <code>Dataset</code> instances</p>
+</li>
+<li>
+<p><code>Geometry</code> instances must be associated with at least one <code>Feature</code> instance</p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="_required_identifiers"><a class="anchor" href="#_required_identifiers"></a>5.1. Required Identifiers</h3>
-<div class="paragraph">
-<p>The BDR requires that certain classes of ABIS object use identifiers from particular systems. Some classes of identifier can be generated by a data submitter, based on a patter, others must be pre-allocated by the BDR Team.</p>
 </div>
-<table class="tableblock frame-all grid-all stripes-even stretch">
-<colgroup>
-<col style="width: 14.2857%;">
-<col style="width: 14.2857%;">
-<col style="width: 28.5714%;">
-<col style="width: 42.8572%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Class</th>
-<th class="tableblock halign-left valign-top">Authority</th>
-<th class="tableblock halign-left valign-top">Pattern / Logic</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linkeddata.tern.org.au/viewers/tern-ontology?resource=https://w3id.org/tern/ontologies/tern/Dataset"><code>tern:Dataset</code></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data Submitter</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://linked.data.gov.au/dataset/bdr/{UUID}" class="bare">https://linked.data.gov.au/dataset/bdr/{UUID}</a></code> where <code>{UUID}</code> is a <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)">UUIDv4</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Most software libraries can generate this e.g. Python can call <code>import uuid</code> and then <code>uuid.uuid4()</code><br>
-<br>
-Alternate IRIs <em>MAY</em> be able to be used, for example for pre-existing datasets, if arranged with the BDR Team</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linkeddata.tern.org.au/viewers/tern-ontology?resource=https://w3id.org/tern/ontologies/tern/Site"><code>tern:Site</code></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Submitter or original Site creator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{Dataset-IRI}/</code> + supplier pattern or original IRI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If created by a supplier, the IRI must be based on the IRI of the Dataset that it is part of and must be unique within the Dataset.<br>
-<br>
-Any system may be used to ensure uniqueness, e.g. UUIDs, systematic numbers etc.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linkeddata.tern.org.au/viewers/tern-ontology?resource=https://w3id.org/tern/ontologies/tern/Sample"><code>tern:Sample</code></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Submitter or original Sample creator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{Dataset-IRI}/</code> + supplier pattern or original IRI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As per Site</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linkeddata.tern.org.au/viewers/tern-ontology?resource=https://w3id.org/tern/ontologies/tern/Observation"><code>tern:Observation</code></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Submitter or original Sample creator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{Dataset-IRI}/</code> + supplier pattern or original IRI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">As per Site</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prov:Agent</code>, one of <a href="https://schema.org/Organisation"><code>schema:Organisation</code></a> or <a href="https://schema.org/Person"><code>schema:Person</code></a>, with a role in relation to a Dataset</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BDR Team</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fixed, as registered</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Agents with roles relating to a Dataset <em>MUST</em> be identified by IRIs as registered in the <a href="https://linked.data.gov.au/dataset/bdr/orgs">BDR Submitting Organisations</a> vocabulary</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prov:Agent</code>, one of <a href="https://schema.org/Organisation"><code>schema:Organisation</code></a> or <a href="https://schema.org/Person"><code>schema:Person</code></a>, other relations</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Submitter</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Any</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Agents other than those with roles relating to Datasets may be identified using any IRI or a Blank Node</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://schema.org/"><code>schema:Datatype</code></a>, as used with the <a href="https://schema.org/identifier"><code>schema:identifier</code></a> predicate</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BDR Team</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fixed, as registered</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datatypes indicated for literal values by the <a href="https://schema.org/identifier"><code>schema:identifier</code></a> predicate <em>MUST</em> be identified by IRIs as registered in the <a href="https://linked.data.gov.au/dataset/bdr/datatypes">BDR Datatypes</a> vocabulary</p></td>
-</tr>
-</tbody>
-</table>
+<div class="sect3">
+<h4 id="_dataset_metadata"><a class="anchor" href="#_dataset_metadata"></a>5.1.2. Dataset Metadata</h4>
+
+</div>
 </div>
 <div class="sect2">
 <h3 id="profile-bdr-mandates"><a class="anchor" href="#profile-bdr-mandates"></a>5.2. Model Element Mandates</h3>
@@ -1484,6 +1427,26 @@ Any system may be used to ensure uniqueness, e.g. UUIDs, systematic numbers etc.
 </tr>
 </tbody>
 </table>
+<div class="sect3">
+<h4 id="_feature_collection_metadata"><a class="anchor" href="#_feature_collection_metadata"></a>5.2.1. Feature Collection Metadata</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_feature_metadata"><a class="anchor" href="#_feature_metadata"></a>5.2.2. Feature Metadata</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_feature_temporality"><a class="anchor" href="#_feature_temporality"></a>5.2.3. Feature Temporality</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_feature_classification"><a class="anchor" href="#_feature_classification"></a>5.2.4. Feature Classification</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_sosa_style_observations"><a class="anchor" href="#_sosa_style_observations"></a>5.2.5. SOSA-style Observations</h4>
+
+</div>
 </div>
 </div>
 </div>
@@ -1595,7 +1558,7 @@ Any system may be used to ensure uniqueness, e.g. UUIDs, systematic numbers etc.
 <div class="content">
 <a class="image" href="img/project-join.svg"><img src="img/project-join.svg" alt="How Projects in the Project Model relate to ABIS (TERN Ontology) Datasets" width="400"></a>
 </div>
-<div class="title">Figure 4. How Projects in the Project Model relate to ABIS (TERN Ontology) Datasets</div>
+<div class="title">Figure 6. How Projects in the Project Model relate to ABIS (TERN Ontology) Datasets</div>
 </div>
 </div>
 <div class="sect3">
@@ -1616,7 +1579,7 @@ Any system may be used to ensure uniqueness, e.g. UUIDs, systematic numbers etc.
 <div class="content">
 <a class="image" href="img/data-release-join.svg"><img src="img/data-release.svg" alt="How Data Release Model elements relate to ABIS (TERN Ontology) Datasets" width="350"></a>
 </div>
-<div class="title">Figure 5. How Data Release Model elements relate to ABIS (TERN Ontology) Datasets</div>
+<div class="title">Figure 7. How Data Release Model elements relate to ABIS (TERN Ontology) Datasets</div>
 </div>
 </div>
 <div class="sect3">
@@ -1806,8 +1769,22 @@ The Submission Manifest Model validator is not included in the BDR Profile of AB
 </div>
 </div>
 <div class="sect1">
+<h2 id="annex-a"><a class="anchor" href="#annex-a"></a>Annex A: Extended Examples</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
 <h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
 <div class="sectionbody">
+<div id="ANSISO" class="dlist">
+<dl>
+<dt class="hdlist1">ANSISO</dt>
+<dd>
+<p>Wong, M &amp; Cox, SJD, <em>ANSIS Ontology</em>, <a href="https://anzsoil.org/def/au/domain" class="bare">https://anzsoil.org/def/au/domain</a></p>
+</dd>
+</dl>
+</div>
 <div id="DCAT" class="dlist">
 <dl>
 <dt class="hdlist1">DCAT</dt>
@@ -1989,7 +1966,7 @@ The Submission Manifest Model validator is not included in the BDR Profile of AB
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-05-15 02:09:49 UTC
+Last updated 2025-05-25 03:58:42 UTC
 </div>
 </div>
 </body>
