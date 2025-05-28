@@ -675,17 +675,22 @@ pre.rouge {
 <ul class="sectlevel2">
 <li><a href="#_data_structure">5.1. Data Structure</a>
 <ul class="sectlevel3">
-<li><a href="#_basic_structure_loc_i_dp">5.1.1. Basic Structure: Loc-I DP</a></li>
-<li><a href="#_dataset_metadata">5.1.2. Dataset Metadata</a></li>
+<li><a href="#_basic_loc_i_dp">5.1.1. Basic: Loc-I DP</a></li>
+<li><a href="#_extension_eia_dp">5.1.2. Extension: EIA DP</a></li>
 </ul>
 </li>
-<li><a href="#profile-bdr-mandates">5.2. Model Element Mandates</a>
+<li><a href="#_subdomain_indication">5.2. Subdomain Indication</a>
 <ul class="sectlevel3">
-<li><a href="#_feature_collection_metadata">5.2.1. Feature Collection Metadata</a></li>
-<li><a href="#_feature_metadata">5.2.2. Feature Metadata</a></li>
-<li><a href="#_feature_temporality">5.2.3. Feature Temporality</a></li>
-<li><a href="#_feature_classification">5.2.4. Feature Classification</a></li>
-<li><a href="#_sosa_style_observations">5.2.5. SOSA-style Observations</a></li>
+<li><a href="#_feature_classification">5.2.1. Feature Classification</a></li>
+</ul>
+</li>
+<li><a href="#_model_element_mandates">5.3. Model Element Mandates</a>
+<ul class="sectlevel3">
+<li><a href="#_feature_temporality">5.3.1. Feature Temporality</a></li>
+<li><a href="#_sosa_style_observations">5.3.2. SOSA-style Observations</a></li>
+<li><a href="#_dataset_metadata">5.3.3. Dataset Metadata</a></li>
+<li><a href="#_feature_collection_metadata">5.3.4. Feature Collection Metadata</a></li>
+<li><a href="#_feature_metadata">5.3.5. Feature Metadata</a></li>
 </ul>
 </li>
 </ul>
@@ -1321,7 +1326,7 @@ pre.rouge {
 <div class="sect2">
 <h3 id="_data_structure"><a class="anchor" href="#_data_structure"></a>5.1. Data Structure</h3>
 <div class="sect3">
-<h4 id="_basic_structure_loc_i_dp"><a class="anchor" href="#_basic_structure_loc_i_dp"></a>5.1.1. Basic Structure: Loc-I DP</h4>
+<h4 id="_basic_loc_i_dp"><a class="anchor" href="#_basic_loc_i_dp"></a>5.1.1. Basic: Loc-I DP</h4>
 <div id="locidp-structure" class="imageblock text-center">
 <div class="content">
 <a class="image" href="img/locidp-structure.svg"><img src="img/locidp-structure.svg" alt="Loc-I Data Profile data structure" width="300"></a>
@@ -1346,12 +1351,26 @@ pre.rouge {
 </div>
 </div>
 <div class="sect3">
-<h4 id="_dataset_metadata"><a class="anchor" href="#_dataset_metadata"></a>5.1.2. Dataset Metadata</h4>
-
+<h4 id="_extension_eia_dp"><a class="anchor" href="#_extension_eia_dp"></a>5.1.2. Extension: EIA DP</h4>
+<div class="paragraph">
+<p><mark>TODO</mark></p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="profile-bdr-mandates"><a class="anchor" href="#profile-bdr-mandates"></a>5.2. Model Element Mandates</h3>
+<h3 id="_subdomain_indication"><a class="anchor" href="#_subdomain_indication"></a>5.2. Subdomain Indication</h3>
+<div class="paragraph">
+<p>These requirements are made to ensure that the sub-domain, within "environment", of the data within Datasets is indicated in a systematic way, using required classifiers.</p>
+</div>
+<div class="sect3">
+<h4 id="_feature_classification"><a class="anchor" href="#_feature_classification"></a>5.2.1. Feature Classification</h4>
+<div class="paragraph">
+<p><mark>TODO</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_model_element_mandates"><a class="anchor" href="#_model_element_mandates"></a>5.3. Model Element Mandates</h3>
 <div class="paragraph">
 <p>The following table lists the requirements for the presence of classes and predicates assigned to data supplied according to this Profile. These requirements are in addition to those imposed by <a href="https://linked.data.gov.au/def/abis#_component_models">ABIS' Component models</a>, such as the <a href="#TERNOntology">TERN Ontology</a>.</p>
 </div>
@@ -1428,23 +1447,25 @@ pre.rouge {
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="_feature_collection_metadata"><a class="anchor" href="#_feature_collection_metadata"></a>5.2.1. Feature Collection Metadata</h4>
+<h4 id="_feature_temporality"><a class="anchor" href="#_feature_temporality"></a>5.3.1. Feature Temporality</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_feature_metadata"><a class="anchor" href="#_feature_metadata"></a>5.2.2. Feature Metadata</h4>
+<h4 id="_sosa_style_observations"><a class="anchor" href="#_sosa_style_observations"></a>5.3.2. SOSA-style Observations</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_feature_temporality"><a class="anchor" href="#_feature_temporality"></a>5.2.3. Feature Temporality</h4>
+<h4 id="_dataset_metadata"><a class="anchor" href="#_dataset_metadata"></a>5.3.3. Dataset Metadata</h4>
+<div class="paragraph">
+<p><mark>TODO</mark></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feature_collection_metadata"><a class="anchor" href="#_feature_collection_metadata"></a>5.3.4. Feature Collection Metadata</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_feature_classification"><a class="anchor" href="#_feature_classification"></a>5.2.4. Feature Classification</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_sosa_style_observations"><a class="anchor" href="#_sosa_style_observations"></a>5.2.5. SOSA-style Observations</h4>
+<h4 id="_feature_metadata"><a class="anchor" href="#_feature_metadata"></a>5.3.5. Feature Metadata</h4>
 
 </div>
 </div>
@@ -1966,7 +1987,7 @@ The Submission Manifest Model validator is not included in the BDR Profile of AB
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-05-25 03:58:42 UTC
+Last updated 2025-05-28 01:24:44 UTC
 </div>
 </div>
 </body>
