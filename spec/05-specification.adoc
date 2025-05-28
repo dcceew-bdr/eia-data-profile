@@ -4,7 +4,7 @@ _The Requirements listed here must be met by data wanting to conform to this Pro
 
 === Data Structure
 
-==== Basic Structure: Loc-I DP
+==== Basic: Loc-I DP
 
 [#locidp-structure,link="img/locidp-structure.svg"]
 .Loc-I Data Profile data structure
@@ -16,11 +16,18 @@ This Profile's Requirements for the overall structure of data are based on those
 * `Feature Collection` instances must exist within one or more `Dataset` instances
 * `Geometry` instances must be associated with at least one `Feature` instance
 
-==== Dataset Metadata
+==== Extension: EIA DP
 
+#TODO#
 
+=== Subdomain Indication
 
-[[profile-bdr-mandates]]
+These requirements are made to ensure that the sub-domain, within "environment", of the data within Datasets is indicated in a systematic way, using required classifiers.
+
+==== Feature Classification
+
+#TODO#
+
 === Model Element Mandates
 
 The following table lists the requirements for the presence of classes and predicates assigned to data supplied according to this Profile. These requirements are in addition to those imposed by https://linked.data.gov.au/def/abis#_component_models[ABIS' Component models], such as the <<TERNOntology, TERN Ontology>>.
@@ -40,12 +47,16 @@ A cardinality of `1` means mandatory. `0+` means zero or more, `1+` one more, et
 | | | | |
 |===
 
+
+==== Feature Temporality
+
+==== SOSA-style Observations
+
+==== Dataset Metadata
+
+#TODO#
+
 ==== Feature Collection Metadata
 
 ==== Feature Metadata
 
-==== Feature Temporality
-
-==== Feature Classification
-
-==== SOSA-style Observations

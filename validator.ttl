@@ -34,7 +34,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://kurrawong.ai"^^xsd:anyURI ;
 .
 
-:Requirement-D-
+:Requirement-D-keywords-envthes
 	a sh:NodeShape ;
-    sh:targetNode schema:Dataset ;
+    sh:targetObjectsOf schema:keywords ;
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:value <http://vocabs.lter-europe.net/EnvThes> ;
+        sh:minCount 1 ;
+        sh:message "Keywords for the dataset must be Concept IRIs from the EnvThes vocabulary"
+    ] ;
 .
+
+
