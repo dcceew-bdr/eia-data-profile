@@ -19,7 +19,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:description "The EIA Data Profile SHACL validator." ;
     schema:name "EIA Data Profile Validator" ;
     schema:hasPart
-        :Requirement-D- ;
+        :Requirement-D-keywords-envthes ,
+        :Requirement-D-boundingbox ;
+    schema:version "0.1" ;
 .
 
 <https://linked.data.gov.au/org/dcceew>
@@ -45,4 +47,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ] ;
 .
 
+:Requirement-D-boundingbox
+	a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:property [
+        sh:path geo:boundingBox ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class geo:Geometry ;
+        sh:message "Each Dataset must indicate exactly one bounding box showing the area of Earth it's data is relevant to"
+    ] ;
+.
 
