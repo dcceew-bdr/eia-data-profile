@@ -14,9 +14,9 @@ The main content of this repository is:
 | **Resource**           | **Role**                                                           | **Location**
 
 | Profile Definition     | definition                                                         | `profile.ttl`
-| Specification Document | [specification](https://www.w3.org/TR/dx-prof/#Role:specification) | `specification.html`
-| SHACL Validator        | [validation](https://www.w3.org/TR/dx-prof/#Role:validation)       | `validation.ttl`
-| Examples               | [example](https://www.w3.org/TR/dx-prof/#Role:example)             | `examples/`
+| Specification Document | https://www.w3.org/TR/dx-prof/#Role:specification[specification] | `specification.html`
+| SHACL Validator        | https://www.w3.org/TR/dx-prof/#Role:validation[validation]       | `validation.ttl`
+| Examples               | https://www.w3.org/TR/dx-prof/#Role:example[example]             | `examples/`
 |===
 
 == License & Citation
